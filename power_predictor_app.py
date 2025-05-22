@@ -17,7 +17,7 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
 else:
     st.info("Using default dataset since no file uploaded.")
-    df = pd.read_csv(r"C:\Users\DEV\Downloads\Processed_Power_Data.csv")
+    df = pd.read_csv("Processed_Power_Data.csv")
 
 # 2. Preprocessing
 df['Timestamp'] = pd.to_datetime(df['Timestamp'])
